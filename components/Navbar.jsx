@@ -2,7 +2,7 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import Github from "../assets/github";
 import Linkedin from "../assets/Linkedin";
-import Twitter from "../assets/Twitter";
+import Twitter from "../assets/twitter";
 import Instagram from "../assets/IG";
 
 const Navbar = () => {

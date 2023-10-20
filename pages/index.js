@@ -5,6 +5,7 @@ import styles from "../styles/Home.module.css";
 import Navbar from "../components/Navbar";
 import Download from "../assets/downoad";
 import About from "../components/About";
+import Projects from "../components/Projects";
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
@@ -26,21 +27,21 @@ export default function Home() {
               I am Oluwafemi, a{" "}
               <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#F40076] to-[#342711]">
                 Frontend Engineer
-              </span>. <br/>
-               I am a{" "}
+              </span>
+              . <br />I am a{" "}
               <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#F40076] to-[#342711]">
                 solution-driven
               </span>{" "}
               developer.
             </p>
             <p>
-              I am a seasoned front-end developer with a rich background in
-              crafting and nurturing web applications. My journey is marked by
-              mastery of an array of cutting-edge technologies, including React,
-              JavaScript,TypeScript, VS Code, Git & GitHub, Tailwind,
-              Next.js, CSS, HTML, and Redux Toolkit. My skills are not just a
-              reflection of my experience; they are a testament to my unwavering
-              commitment to staying at the forefront of web development.
+              I am a seasoned front-end developer with a wealth of experience in
+              creating and nurturing web applications. My journey is defined by
+              my expertise in various cutting-edge technologies, including
+              React, JavaScript, TypeScript, VS Code, Git & GitHub, Tailwind,
+              Next.js, CSS, HTML, and Redux Toolkit. These skills are a
+              testament to my unwavering commitment to staying at the forefront
+              of web development.
             </p>
             <button className="text-black bg-white p-3 rounded-md flex items-center gap-2">
               Download Resume <Download />
@@ -48,7 +49,8 @@ export default function Home() {
           </div>
           <div className="w-[45%]"></div>
         </div>
-        <About/>
+        <About />
+        <Projects/>
       </main>
     </>
   );

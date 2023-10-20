@@ -46,7 +46,7 @@ const About = () => {
         <h2 className="bg-clip-text text-transparent bg-gradient-to-r from-[#F40076] to-[#342711] text-[48px]">
           Work Experience
         </h2>
-        <div className="w-1/2 flex flex-col gap-7 mt-4">
+        <div className="lg:w-1/2 flex flex-col gap-7 mt-4">
           {work.map((e, idx) => (
             <div key={idx} className="flex flex-col gap-6 border-b pb-2 ">
               <div className="flex justify-between">
@@ -65,7 +65,7 @@ const About = () => {
         <h2 className="bg-clip-text text-transparent bg-gradient-to-r from-[#F40076] to-[#342711] text-[48px]">
           Education
         </h2>
-        <div className="w-1/2 flex flex-col gap-7 mt-4">
+        <div className="lg:w-1/2 flex flex-col gap-7 mt-4">
           <div className="flex flex-col gap-6 border-b pb-2 ">
             <div className="flex justify-between">
               <h1>Bsc. in Pure and Applied Chemistry</h1>

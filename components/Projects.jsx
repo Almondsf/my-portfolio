@@ -43,13 +43,13 @@ const Projects = () => {
       <h2 className="bg-clip-text text-transparent bg-gradient-to-r from-[#F40076] to-[#342711] text-[48px]">
         Projects
       </h2>
-      <div className=" grid-cols-3 grid gap-6">
+      <div className=" md:grid-cols-3 grid gap-6 mt-5">
         {projects.map((project, idx) => (
-          <div className="bg-white text-black rounded-md p-4 flex flex-col gap-4">
+          <div className="bg-white text-black rounded-md p-4 flex flex-col gap-4 cursor-default">
             <Image/>
             <h2 className="text-xl">{project.title}</h2>
             <p>{project.desc}</p>
-            <div className="flex justify-between"><span><a href="">Live Preview</a></span> <span>View Code</span></div>
+            <div className="flex justify-between"><span><a href="">Live Preview</a></span> <span><a href="">View Code</a></span></div>
           </div>
         ))}
       </div>

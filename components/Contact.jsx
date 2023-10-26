@@ -8,7 +8,7 @@ const Contact = () => {
       </h2>
       <div className="my-10">
         {/* <Image src="/banner1.jpg" alt="bg" width={700} height={400} /> */}
-        <form action="" className="flex flex-col gap-10 w-1/2">
+        <form action="" className="flex flex-col gap-10 lg:w-1/2 md:items-center">
           <div className="flex flex-col gap-4">
             <label htmlFor="">Name</label>
             <input

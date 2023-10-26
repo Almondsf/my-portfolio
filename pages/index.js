@@ -6,6 +6,7 @@ import Navbar from "../components/Navbar";
 import Download from "../assets/downoad";
 import About from "../components/About";
 import Projects from "../components/Projects";
+import Contact from "../components/Contact";
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
@@ -17,10 +18,10 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className="lg:px-16 px-5">
+      <main className="lg:px-16 px-5 ">
         <Navbar />
 
-        <div className="lg:flex justify-between mt-16">
+        <div className="lg:flex items-center justify-between mt-48">
           <div className="lg:w-[50%] flex flex-col gap-3 items-start">
             <p className="">Hello,</p>
             <p className="text-[30px] md:text-[44px] lg:leading-[50px] font-semibold ">
@@ -47,10 +48,15 @@ export default function Home() {
               Download Resume <Download />
             </button>
           </div>
-          <div className="lg:w-[45%]"></div>
+          <div className="lg:w-[45%]">
+            <video autoPlay muted loop className="">
+              <source src="/animae.mp4" type="video/mp4" />
+            </video>
+          </div>
         </div>
         <About />
         <Projects />
+        <Contact />
       </main>
     </>
   );

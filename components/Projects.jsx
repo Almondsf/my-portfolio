@@ -1,4 +1,7 @@
 import Image from "next/image";
+import Github from "../assets/github";
+import LiveLink from "../assets/link";
+import Linkedin from "../assets/Linkedin";
 
 const Projects = () => {
   const projects = [
@@ -45,11 +48,20 @@ const Projects = () => {
       </h2>
       <div className=" md:grid-cols-3 grid gap-6 mt-5">
         {projects.map((project, idx) => (
-          <div className="bg-white text-black rounded-md p-4 flex flex-col gap-4 cursor-default">
-            <Image/>
+          <div key={idx} className="bg-white text-black rounded-md p-4 flex flex-col gap-4 cursor-default">
+            {/* <Image /> */}
             <h2 className="text-xl">{project.title}</h2>
             <p>{project.desc}</p>
-            <div className="flex justify-between"><span><a href="">Live Preview</a></span> <span><a href="">View Code</a></span></div>
+            <div className="flex justify-between">
+              <span className="flex items-center gap-1">
+                <LiveLink />
+                <a href="">Live Preview</a>
+              </span>{" "}
+              <span className="flex items-center gap-1">
+                <Github />
+                <a href="">View Code</a>
+              </span>
+            </div>
           </div>
         ))}
       </div>

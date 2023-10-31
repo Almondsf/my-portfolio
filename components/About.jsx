@@ -60,7 +60,7 @@ const About = () => {
                   </p>
                 </div>
                 <div className="flex items-center  text-gray-400">
-                  <div class="w-2 h-2 bg-white  mr-2 mt-1"></div>
+                  <div class="w-2 h-2 bg-white  mr-2 "></div>
                   <div className="flex w-full justify-between items-center">
                     <span className="text-xs lg:text-base">{e.company}</span>
                     <span className="text-xs lg:text-base">{e.duration}</span>
@@ -83,7 +83,7 @@ const About = () => {
                 </p>
               </div>
               <div className="flex text-gray-400 text-xs lg:text-base items-center">
-                <div class="w-2 h-2 bg-white  mr-2 mt-1"></div>
+                <div class="w-2 h-2 bg-white  mr-2 "></div>
                 <div className="justify-between flex w-full items-center">
                   <span>University of Lagos, Akoka. (UNILAG)</span>
                   <span>Jan 2022 - Present</span>

@@ -4,6 +4,7 @@ import Github from "../assets/github";
 import Linkedin from "../assets/Linkedin";
 import Twitter from "../assets/twitter";
 import Instagram from "../assets/IG";
+import Menu from "../assets/Menu";
 import { Link } from "react-scroll/modules";
 
 const Navbar = () => {
@@ -20,23 +21,10 @@ const Navbar = () => {
   const { asPath } = useRouter();
 
   return (
-    <div className="lg:flex justify-between fixed gap-32 items-center py-6 lg:mb-20  bg-black hidden">
-      <div className="text-3xl font-medium">
-        <Link
-          className="cursor-pointer"
-          to="home"
-          spy={true}
-          smooth={true}
-          offset={0}
-          duration={500}
-        >
-          Oluwafemi
-        </Link>
-      </div>
-      <div className="lg:flex gap-10 hidden">
-        <div>
+    <div>
+      <div className="lg:flex justify-between lg:fixed  gap-32 items-center lg:py-6 py-4 lg:mb-20  bg-black">
+        <div className="text-3xl font-medium hidden lg:flex">
           <Link
-            activeClass="bg-clip-text font-medium text-transparent bg-gradient-to-r from-[#F40076] to-[#c48c2d]"
             className="cursor-pointer"
             to="home"
             spy={true}
@@ -44,72 +32,90 @@ const Navbar = () => {
             offset={0}
             duration={500}
           >
-            Home
+            Oluwafemi
           </Link>
         </div>
-        <div>
-          <Link
-            activeClass="bg-clip-text font-medium text-transparent bg-gradient-to-r from-[#F40076] to-[#c48c2d]"
-            className="cursor-pointer"
-            to="about"
-            spy={true}
-            smooth={true}
-            offset={0}
-            duration={500}
-          >
-            About
-          </Link>
+        <div className="lg:flex gap-10 hidden">
+          <div>
+            <Link
+              activeClass="bg-clip-text font-medium text-transparent bg-gradient-to-r from-[#F40076] to-[#c48c2d]"
+              className="cursor-pointer"
+              to="home"
+              spy={true}
+              smooth={true}
+              offset={0}
+              duration={500}
+            >
+              Home
+            </Link>
+          </div>
+          <div>
+            <Link
+              activeClass="bg-clip-text font-medium text-transparent bg-gradient-to-r from-[#F40076] to-[#c48c2d]"
+              className="cursor-pointer"
+              to="about"
+              spy={true}
+              smooth={true}
+              offset={0}
+              duration={500}
+            >
+              About
+            </Link>
+          </div>
+          <div>
+            <Link
+              className="cursor-pointer "
+              to="resume"
+              spy={true}
+              smooth={true}
+              offset={0}
+              duration={500}
+            >
+              Resume
+            </Link>
+          </div>
+          <div>
+            <Link
+              activeClass="bg-clip-text font-medium text-transparent bg-gradient-to-r from-[#F40076] to-[#c48c2d]"
+              className="cursor-pointer"
+              to="projects"
+              spy={true}
+              smooth={true}
+              offset={0}
+              duration={500}
+            >
+              Projects
+            </Link>
+          </div>
+          <div>
+            <Link
+              activeClass="bg-clip-text font-medium text-transparent bg-gradient-to-r from-[#F40076] to-[#c48c2d]"
+              className="cursor-pointer"
+              to="contact"
+              spy={true}
+              smooth={true}
+              offset={0}
+              duration={500}
+            >
+              Contact
+            </Link>
+          </div>
         </div>
-        <div>
-          <Link
-            className="cursor-pointer "
-            to="resume"
-            spy={true}
-            smooth={true}
-            offset={0}
-            duration={500}
-          >
-            Resume
-          </Link>
-        </div>
-        <div>
-          <Link
-            activeClass="bg-clip-text font-medium text-transparent bg-gradient-to-r from-[#F40076] to-[#c48c2d]"
-            className="cursor-pointer"
-            to="projects"
-            spy={true}
-            smooth={true}
-            offset={0}
-            duration={500}
-          >
-            Projects
-          </Link>
-        </div>
-        <div>
-          <Link
-            activeClass="bg-clip-text font-medium text-transparent bg-gradient-to-r from-[#F40076] to-[#c48c2d]"
-            className="cursor-pointer"
-            to="contact"
-            spy={true}
-            smooth={true}
-            offset={0}
-            duration={500}
-          >
-            Contact
-          </Link>
+        <div className="lg:flex gap-6 hidden">
+          {socialIcons.map((Icon) => (
+            <a
+              key={Icon.url}
+              href={`${Icon.url}`}
+              target="_blank"
+              className="text-2xl"
+            >
+              {Icon.name}
+            </a>
+          ))}
         </div>
       </div>
-      <div className="lg:flex gap-6 hidden">
-        {socialIcons.map((Icon) => (
-          <a
-            key={Icon.url}
-            href={`${Icon.url}`}
-            target="_blank"
-            className="text-2xl"
-          >
-            {Icon.name}
-          </a>
-        ))}
+      <div className="p-2 w-fit rounded-full fixed right-4 text-4xl bg-white text-black  bg-opacity-70">
+        <Menu />
       </div>
     </div>
   );

@@ -114,7 +114,7 @@ const Navbar = () => {
           ))}
         </div>
       </div>
-      <div className="p-2 w-fit rounded-full fixed right-4 text-4xl bg-white text-black  bg-opacity-70">
+      <div className="lg:hidden p-2 w-fit rounded-full fixed right-4 text-4xl bg-white text-black  bg-opacity-70">
         <Menu />
       </div>
     </div>

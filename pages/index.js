@@ -21,8 +21,11 @@ export default function Home() {
       <main className="lg:px-16 px-5 ">
         <Navbar />
 
-        <div className="lg:flex items-center justify-between mt-48">
-          <div className="lg:w-[50%] flex flex-col gap-3 items-start">
+        <div
+          className="lg:flex  items-center justify-between lg:pt-40 pt-10"
+          id="home"
+        >
+          <div className="lg:w-[50%] flex flex-col lg:gap-3 gap-8 items-start">
             <p className="">Hello,</p>
             <p className="text-[30px] md:text-[44px] lg:leading-[50px] font-semibold ">
               I am Oluwafemi, a{" "}
@@ -35,7 +38,12 @@ export default function Home() {
               </span>{" "}
               developer.
             </p>
-            <p>
+            <div className="lg:w-[45%] ">
+              <video autoPlay muted loop className="">
+                <source src="/animae.mp4" type="video/mp4" />
+              </video>
+            </div>
+            <p id="resume">
               I am a seasoned front-end developer with a wealth of experience in
               creating and nurturing web applications. My journey is defined by
               my expertise in various cutting-edge technologies, including
@@ -48,7 +56,7 @@ export default function Home() {
               Download Resume <Download />
             </button>
           </div>
-          <div className="lg:w-[45%]">
+          <div className="lg:w-[45%] hidden lg:flex">
             <video autoPlay muted loop className="">
               <source src="/animae.mp4" type="video/mp4" />
             </video>
@@ -56,7 +64,11 @@ export default function Home() {
         </div>
         <About />
         <Projects />
-        <Contact />
+        <div id="contact" className="py-20">
+          <div>
+            <Contact />
+          </div>
+        </div>
       </main>
     </>
   );

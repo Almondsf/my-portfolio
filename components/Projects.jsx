@@ -42,13 +42,16 @@ const Projects = () => {
     },
   ];
   return (
-    <div>
-      <h2 className="bg-clip-text text-transparent bg-gradient-to-r from-[#F40076] to-[#342711] text-[48px]">
+    <div id="projects" className="lg:pt-24 my-24 ">
+      <h2 className="bg-clip-text text-transparent bg-gradient-to-r from-[#F40076] to-[#342711] text-[35px] lg:text-[48px]">
         Projects
       </h2>
-      <div className=" md:grid-cols-3 grid gap-6 mt-5">
+      <div className=" md:grid-cols-3 grid gap-6 lg:mt-4 mt-6">
         {projects.map((project, idx) => (
-          <div key={idx} className="bg-white text-black rounded-md p-4 flex flex-col gap-4 cursor-default">
+          <div
+            key={idx}
+            className="bg-white text-black rounded-md p-4 flex flex-col gap-4 cursor-default"
+          >
             {/* <Image /> */}
             <h2 className="text-xl">{project.title}</h2>
             <p>{project.desc}</p>

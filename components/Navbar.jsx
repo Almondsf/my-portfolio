@@ -20,22 +20,34 @@ const Navbar = () => {
   const { asPath } = useRouter();
 
   return (
-    <div className="mb-20 fixed top-0 left-16 right-16">
-      <div className="flex justify-between items-center py-6 mb-20  bg-black">
-        <Link href="/" className="text-3xl font-medium">
+    <div className="lg:flex justify-between fixed gap-32 items-center py-6 lg:mb-20  bg-black hidden">
+      <div className="text-3xl font-medium">
+        <Link
+          className="cursor-pointer"
+          to="home"
+          spy={true}
+          smooth={true}
+          offset={0}
+          duration={500}
+        >
           Oluwafemi
         </Link>
-        <div className="flex gap-10">
+      </div>
+      <div className="lg:flex gap-10 hidden">
+        <div>
           <Link
-            className={
-              asPath === "/"
-                ? "bg-clip-text font-medium text-transparent bg-gradient-to-r from-[#F40076] to-[#c48c2d]"
-                : ""
-            }
-            href="/"
+            activeClass="bg-clip-text font-medium text-transparent bg-gradient-to-r from-[#F40076] to-[#c48c2d]"
+            className="cursor-pointer"
+            to="home"
+            spy={true}
+            smooth={true}
+            offset={0}
+            duration={500}
           >
             Home
           </Link>
+        </div>
+        <div>
           <Link
             activeClass="bg-clip-text font-medium text-transparent bg-gradient-to-r from-[#F40076] to-[#c48c2d]"
             className="cursor-pointer"
@@ -47,22 +59,57 @@ const Navbar = () => {
           >
             About
           </Link>
-          <Link href="/">Resume</Link>
-          <Link href="/">Projects</Link>
-          <Link href="/">Contact</Link>
         </div>
-        <div className="flex gap-6">
-          {socialIcons.map((Icon) => (
-            <a
-              key={Icon.url}
-              href={`${Icon.url}`}
-              target="_blank"
-              className="text-2xl"
-            >
-              {Icon.name}
-            </a>
-          ))}
+        <div>
+          <Link
+            className="cursor-pointer "
+            to="resume"
+            spy={true}
+            smooth={true}
+            offset={0}
+            duration={500}
+          >
+            Resume
+          </Link>
         </div>
+        <div>
+          <Link
+            activeClass="bg-clip-text font-medium text-transparent bg-gradient-to-r from-[#F40076] to-[#c48c2d]"
+            className="cursor-pointer"
+            to="projects"
+            spy={true}
+            smooth={true}
+            offset={0}
+            duration={500}
+          >
+            Projects
+          </Link>
+        </div>
+        <div>
+          <Link
+            activeClass="bg-clip-text font-medium text-transparent bg-gradient-to-r from-[#F40076] to-[#c48c2d]"
+            className="cursor-pointer"
+            to="contact"
+            spy={true}
+            smooth={true}
+            offset={0}
+            duration={500}
+          >
+            Contact
+          </Link>
+        </div>
+      </div>
+      <div className="lg:flex gap-6 hidden">
+        {socialIcons.map((Icon) => (
+          <a
+            key={Icon.url}
+            href={`${Icon.url}`}
+            target="_blank"
+            className="text-2xl"
+          >
+            {Icon.name}
+          </a>
+        ))}
       </div>
     </div>
   );

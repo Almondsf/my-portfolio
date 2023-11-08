@@ -31,12 +31,17 @@ const Contact = () => {
       });
 
       if (response.ok) {
-        toast("Message sent!", { icon: "📤" });
+        toast("Your message has been sent successfully! 📤", { icon: "✅" });
       } else {
-        toast("Ooops! An error occured. Please try again", { icon: "🥺" });
+        toast(
+          "Oops! There was an issue sending your message. Please try again. 🥺",
+          { icon: "❌" }
+        );
       }
     } catch (error) {
-      toast("Ooops! An error occured. Please try again", { icon: "🥺" });
+      toast("Oops! An unexpected error occurred. Please try again. 🥺", {
+        icon: "❌",
+      });
     }
   };
 

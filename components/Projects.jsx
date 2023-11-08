@@ -46,7 +46,7 @@ const Projects = () => {
       <h2 className="bg-clip-text text-transparent bg-gradient-to-r from-[#F40076] to-[#342711] text-[35px] lg:text-[48px]">
         Projects
       </h2>
-      <div className=" md:grid-cols-3 grid gap-6 lg:mt-4 mt-6">
+      <div className=" lg:grid-cols-3 grid md:grid-cols-2 grid-cols-1 w-[85%] mx-auto md:w-full gap-6 lg:mt-4 mt-6">
         {projects.map((project, idx) => (
           <div
             key={idx}

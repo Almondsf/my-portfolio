@@ -38,7 +38,7 @@ export default function Home() {
               </span>{" "}
               developer.
             </p>
-            <div className="lg:w-[45%] ">
+            <div className="lg:w-[45%] lg:hidden ">
               <video autoPlay muted loop className="">
                 <source src="/animae.mp4" type="video/mp4" />
               </video>

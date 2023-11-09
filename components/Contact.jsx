@@ -32,6 +32,10 @@ const Contact = () => {
 
       if (response.ok) {
         toast("Your message has been sent successfully! 📤", { icon: "✅" });
+        nameRef.current.value = "";
+        emailRef.current.value = "";
+        subjectRef.current.value = "";
+        messageRef.current.value = "";
       } else {
         toast(
           "Oops! There was an issue sending your message. Please try again. 🥺",

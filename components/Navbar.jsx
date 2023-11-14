@@ -21,8 +21,8 @@ const Navbar = () => {
   const { asPath } = useRouter();
 
   return (
-    <div className="w-full fixed top-0 z-50">
-      <div className="w-[90%] lg:flex justify-between items-center lg:py-6 py-4 lg:mb-20  bg-black">
+    <div className="w-full fixed top-0 z-50 bg-black">
+      <div className="w-[90%] lg:flex justify-between items-center lg:py-8 py-4   bg-black">
         <div className="text-3xl font-medium hidden lg:flex">
           <Link
             className="cursor-pointer"

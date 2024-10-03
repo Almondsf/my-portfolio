@@ -10,6 +10,14 @@ import Contact from "../components/Contact";
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
+  const downloadResume = () => {
+    const link = document.createElement("a");
+    link.href = "/resume.pdf"; // File is directly in the public folder
+    link.download = "Oluwafemi's resume.pdf"; // The name the file will be saved as
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link); // Clean up
+  };
   return (
     <>
       <Head>
@@ -52,7 +60,10 @@ export default function Home() {
               testament to my unwavering commitment to staying at the forefront
               of web development.
             </p>
-            <button className="text-black bg-white p-3 rounded-md flex items-center gap-2">
+            <button
+              onClick={downloadResume}
+              className="text-black bg-white p-3 rounded-md flex items-center gap-2"
+            >
               Download Resume <Download />
             </button>
           </div>
